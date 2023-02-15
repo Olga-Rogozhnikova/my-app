@@ -1,3 +1,182 @@
 .App {
-  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+  margin-bottom: 100px;
+}
+
+.container {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.mainHeader {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.subHeader {
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.descriptionText {
+  font-size: 15px;
+  font-weight: lighter;
+  text-align: justify;
+}
+
+header img {
+  width: 200px;
+  float: left;
+}
+
+header div.headerMenu {
+  height: 37px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  align-items:end;
+  justify-items: end;
+}
+
+nav div {
+  width: 2000;
+  height: 325px;
+  background-color: #495E57;
+}
+
+nav h1 {
+  padding-top: 10px;
+  color:#f4ce14;
+  margin-block-end: 0;
+}
+
+nav h2 {
+  margin-block-start: 10px;
+  color: #EDEFEE;
+}
+
+nav p {
+  width: 600px;
+  color: #EDEFEE;
+}
+
+nav img {
+  display: inline;
+  width: 400px; /* width of container */
+  height: 400px; /* height of container */
+  object-fit: cover;
+  float: right;
+  position: relative;
+  border-radius: 25px;
+}
+
+nav button {
+  margin-top: 20px;
+  width: 140px;
+  height: 40px;
+}
+
+.buttons {
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #f4ce14;
+}
+
+main {
+  margin-top: 150px;
+}
+
+.orderOnline {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+article {
+  margin-top: 0;
+}
+
+main button {
+  margin-left: auto;
+  width: 140px;
+}
+
+main div.articleBlock {
+  height: 500px;
+  width: 330px;
+  background-color: #EDEFEE;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+main img {
+  width: 330px;
+  height: 230px;
+  object-position: top;
+}
+
+.roundedTopCorners {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.productLine {
+  overflow: auto;
+}
+
+.productName {
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 25px;
+}
+
+.productPrice {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f4ce14;
+  margin-right: 25px;
+}
+
+.productDescription {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.deliveryLine {
+  margin-top: 50px;
+  overflow: auto;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.delivery {
+  float: left;
+  font-size: 18px;
+}
+
+.deliveryIcon {
+  float: right;
+  width: 40px;
+  height: 40px;
+}
+
+main div.dishList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
 }
