@@ -1,13 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-function BookingForm(props) {
 
+function BookingForm() {
+  const timeArrayEven = [
+    {id: 1, value: "17:00"},
+    {id: 2, value: "19:00"},
+    {id: 3, value: "20:00"},
+  ];
+  
+  const timeArrayOdd = [
+    {id: 1, value: "18:00"},
+    {id: 2, value: "21:00"},
+    {id: 3, value: "22:00"}
+  ];
+  
+  function fetchAPI(date) {
+    console.log(date)
+    if(date.day % 2 === 1)
+      return timeArrayOdd;
+    else
+      return timeArrayEven;
+  }
+
+  const [availableTimes, setAvailableTimes] = useState(timeArrayEven);
   const [date, setDate] = useState(new Date());
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState([{id: 1, value: 'Birthday'}, {id: 2, value: 'Anniversary'}])
 
-  const availableTimes = props.availableTimes;
-  const dispatchDate = props.dispatchDate;
+  useEffect(() => {
+    setAvailableTimes(fetchAPI(date))
+  }, [availableTimes, date]);
 
   function handleChange(e) {
     setDate(e.target.value);
@@ -40,12 +62,7 @@ function BookingForm(props) {
               "-" +
               date.getDate().toString().padStart(2, 0)
             }
-            onChange={(e) => {
-              const newDate = new Date(e.target.value);
-              setDate(newDate);
-              console.log(dispatchDate)
-              dispatchDate(newDate)}
-            }
+            onChange={(e) => setDate(new Date(e.target.value))}
             />
         </div>
 
